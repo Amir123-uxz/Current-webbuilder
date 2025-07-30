@@ -1,0 +1,39 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+      'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+      sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    background-color: #0a0e1a;
+    color: #ffffff;
+  }
+}
+
+@layer components {
+  .trading-card {
+    @apply bg-gray-800 border border-gray-700 rounded-lg p-4 shadow-lg;
+  }
+  
+  .trading-button {
+    @apply px-4 py-2 rounded-md font-semibold transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-offset-2;
+  }
+  
+  .trading-button-call {
+    @apply bg-trading-green hover:bg-green-600 text-white focus:ring-green-500;
+  }
+  
+  .trading-button-put {
+    @apply bg-trading-red hover:bg-red-600 text-white focus:ring-red-500;
+  }
+}
