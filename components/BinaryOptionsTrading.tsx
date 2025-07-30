@@ -69,14 +69,14 @@ export default function BinaryOptionsTrading({ selectedAsset, onTrade }: BinaryO
         amount,
         entryPrice: currentPrice.price,
         expiryTime,
-        payout: amount * 1.8 // 80% payout
+        payout: amount * 1.95 // 95% payout
       });
       
       setIsTrading(false);
     }, 500);
   };
 
-  const potentialPayout = amount * 1.8;
+  const potentialPayout = amount * 1.95;
   const potentialProfit = potentialPayout - amount;
 
   return (
